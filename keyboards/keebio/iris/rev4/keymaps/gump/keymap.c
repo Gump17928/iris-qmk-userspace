@@ -48,29 +48,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_GRV,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_F12,
       _______,  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_PIPE,
       _______,  KC_EQL,  KC_MINS, KC_PLUS, KC_LCBR, KC_RCBR, _______,    KC_MUTE, KC_LBRC, KC_RBRC, KC_SCLN, KC_COLN, KC_BSLS, _______,
-                                  KC_LGUI, _______, _______,             _______, _______, KC_RGUI
+                                           KC_LGUI, _______, _______,    _______, _______, KC_RGUI
   ),
 
   /* RAISE - nav / editing / GAMING toggle.  Mirrors Sofle raise_layer,
    * minus BT (wired) and RGB.  undo/cut/copy/paste become plain C(k). */
   [_RAISE] = LAYOUT(
       _______,  _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, TG_GAME,
-      _______,  KC_INS,  KC_PSCR, KC_APP,  _______, _______,                      KC_PGUP, _______, KC_UP,   _______, KC_0,    _______,
-      _______,  KC_LALT, KC_LCTL, KC_LSFT, _______, KC_CAPS,                      KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_DEL,  KC_BSPC,
-      _______,  C(KC_Z), C(KC_X), C(KC_C), C(KC_V), _______, _______,    _______, _______, _______, _______, _______, _______, _______,
+      _______,  KC_INS,  KC_PSCR, KC_APP,  _______, _______,                      KC_PGUP, _______, KC_UP,   _______, _______,    _______,
+      _______,  KC_LALT, KC_LCTL, KC_LSFT, KC_FIND, KC_CAPS,                      KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_DEL,  KC_BSPC,
+      _______,  KC_UNDO, KC_CUT, KC_COPY, KC_PASTE, _______, KC_KB_VOLUME_UP,    KC_KB_VOLUME_DOWN, _______, _______, _______, _______, _______, _______,
                                   KC_LGUI, _______, _______,             _______, _______, KC_RGUI
   ),
 
   /* ADJUST - auto-activated by LOWER + RAISE.  Sofle-style RGB control cluster:
    *   Row 1: UG_TOGG | HUE- | HUE+ | SAT- | SAT+ | next effect
-   *   Row 2:   TR    | VAL- | VAL+ | SPD- | SPD+ |    TR
+   *   Row 2:   TR    | VAL- | VAL+ | SPD- | SPD+ |    TR   
    * Corners keep QK_BOOT so you can enter DFU from the keyboard.
    * NOTE: QMK renamed RGB_* keycodes to UG_* (underglow) in Dec 2024. */
   [_ADJUST] = LAYOUT(
-      QK_BOOT,  _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, QK_BOOT,
-      UG_TOGG,  UG_HUED, UG_HUEU, UG_SATD, UG_SATU, UG_NEXT,                      _______, _______, _______, _______, _______, _______,
-      _______,  UG_VALD, UG_VALU, UG_SPDD, UG_SPDU, _______,                      _______, _______, _______, _______, _______, _______,
-      _______,  _______, _______, _______, G(KC_L), _______, _______,    _______, _______, _______, _______, _______, _______, _______,
+      QK_BOOT,  _______, _______, _______, _______, _______,                      _______, KC_7, KC_8, KC_9, KC_PSLS, QK_BOOT,
+      UG_TOGG,  UG_HUED, UG_HUEU, UG_SATD, UG_SATU, UG_NEXT,                      _______, KC_4, KC_5, KC_6, KC_PAST, _______,
+      _______,  UG_VALD, UG_VALU, UG_SPDD, UG_SPDU, _______,                      _______, KC_1, KC_2, KC_3, KC_PMNS, _______,
+      _______,  _______, _______, _______, G(KC_L), _______, _______,    _______, _______, _______, KC_0, KC_DOT, KC_PPLS, _______,
                                   _______, _______, _______,             _______, _______, _______
   ),
 
