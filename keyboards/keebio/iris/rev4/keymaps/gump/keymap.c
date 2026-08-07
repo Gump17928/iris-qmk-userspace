@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_ESC,   KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                             KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_BSPC,
       KC_TAB,   KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                             KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,KC_QUOT,
       KC_LSFT,  KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_MUTE,        KC_MPLY,  KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,KC_RSFT,
-                                KC_LCTL, LOWER,  KC_SPC,                KC_ENT,   RAISE,  KC_RCTL
+                                KC_LCTL, LOWER,  KC_SPC,                KC_ENT,   RAISE,  KC_LGUI
   ),
 
   /* LOWER - F-keys, numbers, symbols.  Mirrors Sofle lower_layer. */
@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_GRV,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_F12,
       _______,  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_PIPE,
       _______,  KC_EQL,  KC_MINS, KC_PLUS, KC_LCBR, KC_RCBR, _______,    _______, KC_LBRC, KC_RBRC, KC_SCLN, KC_COLN, KC_BSLS, _______,
-                                  _______, _______, _______,             _______, _______, _______
+                                  KC_LGUI, _______, _______,             _______, _______, KC_RGUI
   ),
 
   /* RAISE - nav / editing / GAMING toggle.  Mirrors Sofle raise_layer,
@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______,  KC_INS,  KC_PSCR, KC_APP,  _______, _______,                      KC_PGUP, _______, KC_UP,   _______, KC_0,    _______,
       _______,  KC_LALT, KC_LCTL, KC_LSFT, _______, KC_CAPS,                      KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_DEL,  KC_BSPC,
       _______,  C(KC_Z), C(KC_X), C(KC_C), C(KC_V), _______, _______,    _______, _______, _______, _______, _______, _______, _______,
-                                  _______, _______, _______,             _______, _______, _______
+                                  KC_LGUI, _______, _______,             _______, _______, KC_RGUI
   ),
 
   /* ADJUST - auto-activated by LOWER + RAISE.  Sofle-style RGB control cluster:
@@ -70,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       QK_BOOT,  _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, QK_BOOT,
       UG_TOGG,  UG_HUED, UG_HUEU, UG_SATD, UG_SATU, UG_NEXT,                      _______, _______, _______, _______, _______, _______,
       _______,  UG_VALD, UG_VALU, UG_SPDD, UG_SPDU, _______,                      _______, _______, _______, _______, _______, _______,
-      _______,  _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______, _______,
+      _______,  _______, _______, _______, G(KC_L), _______, _______,    _______, _______, _______, _______, _______, _______, _______,
                                   _______, _______, _______,             _______, _______, _______
   ),
 
@@ -82,6 +82,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TAB,   KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                             KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_BSPC,
       KC_LSFT,  KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                             KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,KC_QUOT,
       KC_LCTL,  KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_MUTE,        KC_MPLY,  KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,KC_RSFT,
-                                KC_CAPS, LOWER,  KC_SPC,                KC_ENT,   RAISE,  KC_RCTL
+                                KC_CAPS, LOWER,  KC_SPC,                KC_ENT,   RAISE,  KC_LGUI
   ),
 };
