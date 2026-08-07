@@ -61,13 +61,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   _______, _______, _______,             _______, _______, _______
   ),
 
-  /* ADJUST - auto-activated by LOWER + RAISE.  Sofle used this for BT/RGB;
-   * on Iris we expose QK_BOOT in the corners so we can enter DFU from the
-   * keyboard for future flashes.  Everything else transparent. */
+  /* ADJUST - auto-activated by LOWER + RAISE.  Sofle-style RGB control cluster:
+   *   Row 1: RGB_TOG | HUE- | HUE+ | SAT- | SAT+ | next effect
+   *   Row 2:   TR    | VAL- | VAL+ | SPD- | SPD+ |    TR
+   * Corners keep QK_BOOT so you can enter DFU from the keyboard. */
   [_ADJUST] = LAYOUT(
       QK_BOOT,  _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, QK_BOOT,
-      _______,  _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______,
-      _______,  _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______,
+      RGB_TOG,  RGB_HUD, RGB_HUI, RGB_SAD, RGB_SAI, RGB_MOD,                      _______, _______, _______, _______, _______, _______,
+      _______,  RGB_VAD, RGB_VAI, RGB_SPD, RGB_SPI, _______,                      _______, _______, _______, _______, _______, _______,
       _______,  _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______, _______,
                                   _______, _______, _______,             _______, _______, _______
   ),
