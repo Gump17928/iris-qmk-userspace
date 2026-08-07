@@ -1,19 +1,16 @@
 // Keymap-level overrides for Iris rev4 (gump).
+//
+// NOTE: Upstream keebio/iris/rev4 already sets RGBLED_NUM = 12 (via info.json)
+// and picks a default RGB mode.  We only add split-sync + sleep here.
 
 #pragma once
 
-// Split underglow: 6 WS2812 LEDs per half, 12 total.
-#define RGBLED_NUM 12
+// Tell RGB code that the WS2812 chain is physically split: 6 LEDs per half.
+// Without this, the slave half's LEDs won't respond to the master.
 #define RGBLED_SPLIT { 6, 6 }
 
-// Sync RGB mode/hue/sat/val from master to slave over TRRS.
+// Sync RGB mode / hue / sat / val / speed from master to slave over TRRS.
 #define RGBLIGHT_SPLIT
 
-// Turn LEDs off when the host goes to sleep.
+// Turn the underglow off when the host goes to sleep.
 #define RGBLIGHT_SLEEP
-
-// Nicer defaults: static light on first boot until you cycle with RGB_MOD.
-#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_STATIC_LIGHT
-#define RGBLIGHT_DEFAULT_HUE  213   // blue-ish
-#define RGBLIGHT_DEFAULT_SAT  255
-#define RGBLIGHT_DEFAULT_VAL  128
