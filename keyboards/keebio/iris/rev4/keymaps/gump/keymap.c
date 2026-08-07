@@ -62,13 +62,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   /* ADJUST - auto-activated by LOWER + RAISE.  Sofle-style RGB control cluster:
-   *   Row 1: RGB_TOG | HUE- | HUE+ | SAT- | SAT+ | next effect
+   *   Row 1: UG_TOGG | HUE- | HUE+ | SAT- | SAT+ | next effect
    *   Row 2:   TR    | VAL- | VAL+ | SPD- | SPD+ |    TR
-   * Corners keep QK_BOOT so you can enter DFU from the keyboard. */
+   * Corners keep QK_BOOT so you can enter DFU from the keyboard.
+   * NOTE: QMK renamed RGB_* keycodes to UG_* (underglow) in Dec 2024. */
   [_ADJUST] = LAYOUT(
       QK_BOOT,  _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, QK_BOOT,
-      RGB_TOG,  RGB_HUD, RGB_HUI, RGB_SAD, RGB_SAI, RGB_MOD,                      _______, _______, _______, _______, _______, _______,
-      _______,  RGB_VAD, RGB_VAI, RGB_SPD, RGB_SPI, _______,                      _______, _______, _______, _______, _______, _______,
+      UG_TOGG,  UG_HUED, UG_HUEU, UG_SATD, UG_SATU, UG_NEXT,                      _______, _______, _______, _______, _______, _______,
+      _______,  UG_VALD, UG_VALU, UG_SPDD, UG_SPDU, _______,                      _______, _______, _______, _______, _______, _______,
       _______,  _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______, _______,
                                   _______, _______, _______,             _______, _______, _______
   ),
